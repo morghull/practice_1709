@@ -1,0 +1,30 @@
+@charset 'utf-8';
+@import url("./reset.css");
+@import "./reset.css";
+@import "./fonts.css";
+
+* {
+  box-sizing: inherit;
+}
+body {
+  background-color: rgb(216, 212, 212);
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.userList h1 {
+  margin-bottom: 10%;
+  color: white;
+  font-size: 3em;
+  font-family: sans-serif;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgb(145, 145, 145);
+}
+/*  [320,576] - small smartphones
+768 [576,768] - regular smart
+992 [768,992] - tablets
+1200 [992,1200] - desctop laptop
+1400  [1200,1400] - desctop
+ [1400,] - desctop large
+*/

@@ -1,0 +1,115 @@
+:root {
+  --text-color: #a3a3a3;
+  --attraction-color: #fede48;
+  --font-size: 16px;
+  --card-bg-color: white;
+}
+.fakeUserCard {
+  width: 96%;
+  height: 10px;
+  position: absolute;
+  top: -10px;
+  left: 2%;
+  background-color: var(--card-bg-color);
+  border-radius: 5px 5px 0 0;
+  box-shadow: 0px -2px 3px rgb(211, 206, 206) inset;
+}
+.userCard {
+  min-height: 40vh;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+  background-color: var(--card-bg-color);
+  box-shadow: 0px 1px 15px #aaa;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+}
+.userCard::after {
+  content: "+";
+  display: inline-block;
+  position: absolute;
+  right: -25px;
+  top: calc(50% - 25px);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--attraction-color);
+  text-align: center;
+  line-height: 50px;
+  font-size: 2rem;
+}
+.imageWrapper {
+  width: 40%;
+}
+.userImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px 0 0 5px;
+}
+.userInfo {
+  margin: auto;
+  margin-left: 10%;
+  color: var(--text-color);
+}
+.userPersonalData {
+  margin-bottom: 30%;
+}
+.userName {
+  color: #000;
+  font-size: 1.5rem;
+}
+.userName::after {
+  content: "pro";
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  padding: 5px 8px;
+  background-color: var(--text-color);
+  border-radius: 10px;
+  color: var(--card-bg-color);
+  font-size: 0.5em;
+  text-transform: uppercase;
+}
+.userStatisticContainer {
+  display: flex;
+  justify-content: space-around;
+}
+.userStatistic {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+.userStatistic span + span {
+  margin-top: 0.3em;
+  font-size: 1.5em;
+}
+@media (max-width: 550px) {
+  .userCard {
+    flex-direction: column;
+  }
+  .userCard::after {
+    display: none;
+  }
+  .imageWrapper {
+    width: 100%;
+  }
+  .userPersonalData {
+    text-align: center;
+  }
+  .userName {
+    padding-top: 1em;
+  }
+  .userName::after {
+    display: none;
+  }
+  .userInfo {
+    margin: 0;
+  }
+  .userStatisticContainer {
+    padding-bottom: 2em;
+  }
+}
